@@ -1,16 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Anagram {
 
-public static boolean ang(String str,String str1) {
-//Complete this Code Snippet
+    public static boolean ang(String str,String str1) {
+    //Complete this Code Snippet
+    str = str.toLowerCase();
+    str1 = str1.toLowerCase();
 
-if(n1!=n2) {
-		return false;
-	}
-//Complete the Code Snippet
+    int n1 = str.length();
+    int n2 = str1.length();
+    if(n1!=n2) {
+        return false;
+    }
+    char[] array1 = str.toCharArray();
+    char[] array2 = str1.toCharArray();
 
-public static void main(String[] args) {
-Scanner in=new Scanner(System.in);
-String str=in.nextLine();
-String str1=in.nextLine();
-	System.out.println(ang(str, str1));
-}}
+    Arrays.sort(array1);
+    Arrays.sort(array2);
+    Boolean result = Arrays.equals(array1, array2);
+    return result;
+    }
+    //Complete the Code Snippet
+    
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter the str: ");
+        String str=in.nextLine();
+        System.out.print("Enter the str1: ");
+        String str1=in.nextLine();
+        System.out.println(ang(str, str1));
+        in.close();
+    }
+}
