@@ -19,3 +19,6 @@ String str=in.nextLine();
 String str1=in.nextLine();
 	System.out.println("strings are anagram : "+ ang(str, str1));
 }}
+
+
+###Shashank
